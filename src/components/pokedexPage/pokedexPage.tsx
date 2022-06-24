@@ -1,10 +1,20 @@
-import { Header } from "components";
+import { CartBox, Wrapper, Filter, Footer, Header } from "components";
+import { Inner, Bold, Title } from './style';
 
 export const PokedexPage = () => {
   return (
     <>
       <Header/>
-      <h1>Pokedex page</h1>
+      <Inner>
+        <main>
+          <Wrapper>
+            <Title>800 <Bold>Pokemons</Bold> for you to choose your favorite</Title>
+            <Filter/>
+            <CartBox/>
+          </Wrapper>
+        </main>
+        <Footer/>
+      </Inner>
     </>
   );
 };
