@@ -1,0 +1,11 @@
+export enum COLORS {
+  GREEN = '#73D677',
+  BLUE = '#07D6F2',
+  THIRD = '#F5DB13',
+  PRIMARY = '#F2B807',
+  SECOND = '#F28F16',
+  DANGER = '#D93E30',
+  WHITE = '#F6F7F9',
+  DARK = '#212121',
+  BUTTON = '#F2CB07',
+}

@@ -1,24 +1,20 @@
-import React from 'react';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { AppRouter } from 'router/appRouter';
+import { useThemeSelector } from 'store/useThemeSelector';
+import { ThemeProvider } from 'styled-components';
+import { DarkTheme } from 'styles/darkTheme';
+import { LightTheme } from 'styles/lightTheme';
+import { GlobalStyles } from 'styles/style';
 
-function App() {
+export const App = () => {
+  const {theme} = useThemeSelector();
+  const currentTheme = theme === 'LightTheme' ? LightTheme : DarkTheme
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+        <ThemeProvider theme={currentTheme}>
+          <GlobalStyles/>
+          <AppRouter/>
+        </ThemeProvider>
+      </BrowserRouter>
   );
 }
-
-export default App;
