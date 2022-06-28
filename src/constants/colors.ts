@@ -8,4 +8,8 @@ export enum COLORS {
   WHITE = '#F6F7F9',
   DARK = '#212121',
   BUTTON = '#F2CB07',
+  WHITE_DEF='#FFFFFF',
+  BLACK='#000000',
+  DARK_GREY='#4F4F4F',
+  GREY = '#FDFDFD'
 }

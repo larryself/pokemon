@@ -1,6 +1,8 @@
 export enum BREAKPOINTS {
-  mobile = '375px',
-  sm = '640px',
-  tablet = '768px',
-  desktop = '1440px',
+  xs = '375px',
+  sm =  '640px',
+  md = '768px',
+  lg = '992px',
+  xl = '1200px',
+  xxl = '1440px',
 }

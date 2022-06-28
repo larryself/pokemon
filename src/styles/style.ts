@@ -49,16 +49,15 @@ export const GlobalStyles = createGlobalStyle`
   body {
     height: 100vh;
     font: 1.6rem 'Source Sans Pro', sans-serif;
-    display: flex;
   }
 
   #root {
     display: flex;
     flex-direction: column;
-    flex: 1 0 auto;;
+    height: 100%;
   }
   main {
-    flex: 1 0 auto;
+    flex-grow: 1;
     overflow: hidden;
   }
   a,
