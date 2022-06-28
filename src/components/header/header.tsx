@@ -1,32 +1,50 @@
-import { Menu, ThemeToggler, Wrapper, Logo } from 'components';
+import { Menu, ThemeToggler, Logo } from 'components';
 import { Burger, BurgerIcon } from 'components/nav/style';
-import { Container, Link, Box, Title, LogoInner, Wrap, MenuInner, Blur } from 'components/header/style';
+import {
+  Container,
+  Box,
+  Title,
+  LogoInner,
+  Wrap,
+  Inner,
+  ThemeToggleInner,
+  MenuInner,
+  Blur,
+  WrapLogo,
+} from 'components/header/style';
 import React, { useState } from 'react';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <Container>
-      <Wrapper>
+    <>
+      <Container>
         <Box isOpen={isOpen}>
-          <Link href={'/'}>
-            <LogoInner isOpen={isOpen}>
+          <a href={'/'}>
+            <LogoInner>
               <Logo/>
             </LogoInner>
             <Title>Pokemon</Title>
-          </Link>
+          </a>
           <Wrap>
-            <Blur isOpen={isOpen}/>
             <Burger isOpen={isOpen} onClick={() => setIsOpen(prevState => !prevState)}>
               <BurgerIcon/>
             </Burger>
-            <MenuInner isOpen={isOpen}>
-              <Menu isOpen={isOpen}/>
-              <ThemeToggler isOpen={isOpen}/>
-            </MenuInner>
+            <Inner isOpen={isOpen}>
+              <WrapLogo isOpen={isOpen}>
+                <Logo/>
+              </WrapLogo>
+              <MenuInner isOpen={isOpen}>
+                <Menu isOpen={isOpen}/>
+              </MenuInner>
+              <ThemeToggleInner isOpen={isOpen}>
+                <ThemeToggler isOpen={isOpen}/>
+              </ThemeToggleInner>
+            </Inner>
           </Wrap>
         </Box>
-      </Wrapper>
-    </Container>
+      </Container>
+      <Blur isOpen={isOpen} onClick={() => setIsOpen(false)}/>
+    </>
   );
 };

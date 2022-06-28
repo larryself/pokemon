@@ -1,16 +1,16 @@
 import { BREAKPOINTS } from 'constants/breakpoints';
 import { NavLink as BaseNavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { COLORS } from "../../constants/colors";
+import { COLORS } from '../../constants/colors';
 
 export const Container = styled.nav`
   display: flex;
 `;
 
-export const Burger = styled.div<{isOpen: boolean}>`
+export const Burger = styled.div<{ isOpen: boolean }>`
   cursor: pointer;
-  @media (max-width: ${BREAKPOINTS.mobile}) {
-    display: ${props=> props.isOpen? 'none': 'block'};
+  @media (max-width: ${BREAKPOINTS.sm}) {
+    display: ${props => props.isOpen ? 'none' : 'block'};
     width: 31px;
     height: 22px;
     position: relative;
@@ -37,7 +37,7 @@ export const Burger = styled.div<{isOpen: boolean}>`
 `;
 
 export const BurgerIcon = styled.span`
-  @media (max-width: ${BREAKPOINTS.mobile}) {
+  @media (max-width: ${BREAKPOINTS.sm}) {
     width: 31px;
     height: 5.5px;
     border-radius: 2px;
@@ -48,37 +48,57 @@ export const BurgerIcon = styled.span`
   }
 `;
 
-export const List = styled.ul<{isOpen: boolean}>`
+export const List = styled.ul<{ isOpen: boolean }>`
   display: flex;
   gap: 66px;
   font: 2.5rem 'Karla', sans-serif;
-  @media (max-width: ${BREAKPOINTS.tablet}){
-    gap: 44px;}
-  @media (max-width: ${BREAKPOINTS.mobile}){
-    display: flex;
+  @media (max-width: ${BREAKPOINTS.xxl}) {
+    gap: 44px;
+  }
+  @media (max-width: ${BREAKPOINTS.md}) {
+    gap: 34px;
+  }
+  @media (max-width: ${BREAKPOINTS.sm}) {
     flex-direction: column;
     align-items: center;
     gap: 16px;
   }
 `;
 export const Item = styled.li`
-`
+`;
 
-export const NavLink = styled(BaseNavLink)`
+export const NavLink = styled(BaseNavLink)<{ isOpen: boolean }>`
   position: relative;
-  color:  ${({ theme }) => theme.textHeader};
+  color: ${({theme}) => theme.textHeader};
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1.166;
+
   &.active {
-    color:  ${({ theme }) => theme.linkActiveHeader};
+    color: ${({theme}) => theme.linkActiveHeader};
   }
-  &.active::after{
+
+  &.active::after {
     content: '';
     width: 85%;
     height: 3px;
     border-radius: 15px;
-    background-color: ${({ theme }) => theme.linkActiveHeader};
+    background-color: ${({theme}) => theme.linkActiveHeader};
     position: absolute;
     left: 0;
     bottom: -5px;
   }
-  
-`
+
+  @media (max-width: ${BREAKPOINTS.md}) {
+    font-size: 1.9rem;
+    line-height: 1.157;
+  }
+  @media (max-width: ${BREAKPOINTS.xs}) {
+    font-size: 2.7rem;
+    line-height: 1.185;
+    text-shadow: 4px 4px 20px rgba(1, 28, 64, 0.2);
+  }
+  ${props => props.isOpen && 'font-size: 2.7rem !important; line-height: 31.57px !important'}
+`;

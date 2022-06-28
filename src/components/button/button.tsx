@@ -2,7 +2,10 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { BREAKPOINTS } from "constants/breakpoints";
 
-export const Container = styled.button`
+export const Container = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Karla';
   background-color: ${props => props.color && props.color};
   width: 231px;
@@ -11,15 +14,16 @@ export const Container = styled.button`
   border-radius: 11px;
   font-size: 2.3rem;
   font-weight: 700;
-  @media (max-width: ${BREAKPOINTS.mobile}) {
-    width: 312px;
+  @media (max-width: ${BREAKPOINTS.xs}) {
+    width: 100%;
+    max-width: 312px;
     height: 55px;
   }
 `;
 
-export const Button: FC<{ text: string, color: string }> = ({text, color}) => {
+export const Button: FC<{ text: string, color: string, linkTo: string }> = ({text, color, linkTo}) => {
   return (
-    <Container color={color}>
+    <Container color={color} href={linkTo}>
       {text}
     </Container>
   );
