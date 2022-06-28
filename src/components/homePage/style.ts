@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import { COLORS } from "constants/colors";
-import { BREAKPOINTS } from "constants/breakpoints";
+import styled from 'styled-components';
+import { COLORS } from 'constants/colors';
+import { BREAKPOINTS } from 'constants/breakpoints';
+import { Wrapper } from '../wrapper/wrapper';
 
 export const Inner = styled.div`
   background: ${({theme}) => theme.bgContent};
@@ -9,83 +10,98 @@ export const Inner = styled.div`
   flex-direction: column;
   flex: 1 0 auto;
 `;
-export const Container = styled.div`
+
+export const Container = styled('div')`
   display: flex;
-  height: 100%;
   padding-top: 73px;
-  @media (max-width: ${BREAKPOINTS.tablet}) {
+  @media (max-width: ${BREAKPOINTS.lg}) {
     padding-top: 18px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 `;
+
 export const Box = styled.div`
-  max-width: 516px;
   display: flex;
   flex-direction: column;
   gap: 64px;
   margin-top: 54px;
-  @media (max-width: ${BREAKPOINTS.tablet}) {
-    max-width: 100%;
+  @media (min-width: ${BREAKPOINTS.lg}) {
+    width: 48%;
+  }
+  @media (max-width: ${BREAKPOINTS.lg}) {
     order: 1;
     gap: 6px;
     align-items: center;
+    margin-top: 0;
     & :last-child {
-      margin: 33px 0
+      margin: 27px 0 20px
     }
   }
 `;
+
 export const Title = styled.h1`font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 72px;
-  line-height: 84px;
+  font-size: 7.2rem;
+  line-height: 1.166;
   color: ${({theme}) => theme.text};
   letter-spacing: 4px;
-  @media (max-width: ${BREAKPOINTS.tablet}) {
-    font-size: 72px;
-    line-height: 84px;
-    text-align: center;
-
+  @media (min-width: ${BREAKPOINTS.lg}) {
+    max-width: 506px;
   }
-  @media (max-width: ${BREAKPOINTS.mobile}) {
-    font-size: 42px;
-    line-height: 49px;
+  @media (max-width: ${BREAKPOINTS.lg}) {
+    text-align: center;
+  }
+  @media (max-width: ${BREAKPOINTS.md}) {
+    font-size: 7.2rem;
+    line-height: 1.166;
+    text-align: center;
+  }
+  @media (max-width: ${BREAKPOINTS.xs}) {
+    font-size: 4.2rem;
+    line-height: 1.166;
     text-align: center;
   }
 `;
-export const Bold = styled.span`font-weight: 700;
-`
+
 export const SubTitle = styled.h2`font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
-  line-height: 37px;
-  max-width: 515px;
-  @media (max-width: ${BREAKPOINTS.tablet}) {
+  font-size: 3.2rem;
+  line-height: 1.156;
+  @media (min-width: ${BREAKPOINTS.lg}) {
+    max-width: 515px;
+  }
+  @media (max-width: ${BREAKPOINTS.lg}) {
     text-align: center;
-    font-size: 24px;
-    line-height: 28px;
-    max-width: 639px;
+  }
+  @media (max-width: ${BREAKPOINTS.md}) {
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 1.169;
+  }
+  @media (max-width: ${BREAKPOINTS.sm}) {
   }
 `;
+
 export const Banner = styled.div`
   position: relative;
-  max-width: 888px;
-  max-height: 678px;
-
-  & > svg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  @media (min-width: ${BREAKPOINTS.lg}) {
+    width: 50%;
+    & > svg {
+      position: absolute;
+      width: 888px;
+      height: 647px;
+    }
   }
-
-  @media (max-width: ${BREAKPOINTS.tablet}) {
+  @media (max-width: ${BREAKPOINTS.lg}) {
     max-width: 706px;
-    max-height: 539px;
+
   }
-  @media (max-width: ${BREAKPOINTS.mobile}) {
+  @media (max-width: ${BREAKPOINTS.xs}) {
     max-width: 375px;
-    max-height: 287px;
   }
 `;

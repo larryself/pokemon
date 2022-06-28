@@ -7,7 +7,7 @@ export const ErrorPage = () => {
     <Container>
       <Error404/>
       <Title><WhiteText>The rocket team</WhiteText> has won this time.</Title>
-      <Button text={'Return'} color={COLORS.BUTTON}/>
+      <Button text={'Return'} color={COLORS.BUTTON} linkTo={'/'}/>
     </Container>
   );
 };

@@ -1,7 +1,7 @@
-import { Footer, Header, Button, Wrapper, BannerComplete } from 'components';
-import { Inner, Bold, Title, Box, SubTitle, Banner, Container} from './style';
+import { Footer, Header, Button, BannerComplete, Wrapper } from 'components';
+import { Inner, Title, Box, SubTitle, Banner, Container } from './style';
 
-import { COLORS } from "../../constants/colors";
+import { COLORS } from '../../constants/colors';
 
 export const HomePage = () => {
   return (
@@ -10,18 +10,16 @@ export const HomePage = () => {
       <Inner>
         <main>
           <Wrapper>
-            <Container>
-              <Box>
-                <Title><Bold>Find</Bold> all your
-                  favorite <Bold>Pokemon</Bold></Title>
-                <SubTitle>You can know the type of Pokemon, its strengths, disadvantages and abilities
-                </SubTitle>
-                <Button color={COLORS.GREEN} text={'See pokemons'}/>
-              </Box>
-              <Banner>
-                <BannerComplete width={375} height={287}/>
-              </Banner>
-            </Container>
+          <Container>
+            <Box>
+              <Title><b>Find</b> all your favorite <b>Pokemon</b></Title>
+              <SubTitle>You can know the type of Pokemon, its strengths, disadvantages and abilities</SubTitle>
+              <Button color={COLORS.GREEN} text={'See pokemons'} linkTo={'/pokedex'}/>
+            </Box>
+            <Banner>
+              <BannerComplete/>
+            </Banner>
+          </Container>
           </Wrapper>
         </main>
         <Footer/>

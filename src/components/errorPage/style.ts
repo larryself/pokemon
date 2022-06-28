@@ -10,7 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 export const Title = styled.h1`
-  color: #000000;`
+  color: ${COLORS.BLACK};`
 export const WhiteText = styled.span`
   color: #F2F2F2;`
 export const Error404 = styled.div`

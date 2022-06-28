@@ -1,5 +1,5 @@
-import { CartBox, Wrapper, Filter, Footer, Header } from "components";
-import { Inner, Bold, Title } from './style';
+import { Wrapper, Footer, Header } from 'components';
+import { Inner, Title, Container } from './style';
 
 export const PokedexPage = () => {
   return (
@@ -8,9 +8,9 @@ export const PokedexPage = () => {
       <Inner>
         <main>
           <Wrapper>
-            <Title>800 <Bold>Pokemons</Bold> for you to choose your favorite</Title>
-            <Filter/>
-            <CartBox/>
+            <Container>
+              <Title>800 <b>Pokemons</b> for you to choose your favorite</Title>
+            </Container>
           </Wrapper>
         </main>
         <Footer/>
