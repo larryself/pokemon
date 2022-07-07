@@ -1,7 +1,9 @@
-import { Wrapper, Footer, Header } from 'components';
+import { Wrapper, Footer, Header, CartBox, Filter } from 'components';
 import { Inner, Title, Container } from './style';
+import { usePokemonSelector } from 'store';
 
 export const PokedexPage = () => {
+  const {limit} = usePokemonSelector()
   return (
     <>
       <Header/>
@@ -9,7 +11,9 @@ export const PokedexPage = () => {
         <main>
           <Wrapper>
             <Container>
-              <Title>800 <b>Pokemons</b> for you to choose your favorite</Title>
+              <Title>{limit} <b>Pokemons</b> for you to choose your favorite</Title>
+              <Filter/>
+              <CartBox/>
             </Container>
           </Wrapper>
         </main>

@@ -8,5 +8,11 @@ export const LightTheme = {
   textHeader: COLORS.BLACK,
   bgMain: COLORS.DARK,
   text: COLORS.BLACK,
-  arrow : COLORS.THIRD,
-}
+  arrow: COLORS.THIRD,
+  filterBG: COLORS.LIGHT_GREY,
+  filterText: COLORS.BLACK,
+  filterInputPl: 'rgba(33, 33, 33, 0.8)',
+  cartBG: COLORS.WHITE,
+  cartText: COLORS.DARK,
+  cartStatName: '#4B4B4B',
+};

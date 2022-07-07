@@ -19,7 +19,7 @@ export const Header = () => {
   return (
     <>
       <Container>
-        <Box isOpen={isOpen}>
+        <Box>
           <a href={'/'}>
             <LogoInner>
               <Logo/>
@@ -27,18 +27,18 @@ export const Header = () => {
             <Title>Pokemon</Title>
           </a>
           <Wrap>
-            <Burger isOpen={isOpen} onClick={() => setIsOpen(prevState => !prevState)}>
+            <Burger onClick={() => setIsOpen(prevState => !prevState)}>
               <BurgerIcon/>
             </Burger>
             <Inner isOpen={isOpen}>
               <WrapLogo isOpen={isOpen}>
                 <Logo/>
               </WrapLogo>
-              <MenuInner isOpen={isOpen}>
-                <Menu isOpen={isOpen}/>
+              <MenuInner>
+                <Menu/>
               </MenuInner>
-              <ThemeToggleInner isOpen={isOpen}>
-                <ThemeToggler isOpen={isOpen}/>
+              <ThemeToggleInner>
+                <ThemeToggler/>
               </ThemeToggleInner>
             </Inner>
           </Wrap>

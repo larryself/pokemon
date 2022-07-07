@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { BREAKPOINTS } from 'constants/breakpoints';
-import { COLORS } from '../../constants/colors';
+import { COLORS } from 'constants/colors';
 
-export const Container = styled.div<{ isOpen: boolean }>`
+export const Container = styled.div`
   @media (max-width: ${BREAKPOINTS.xs}) {
     display: flex;
     flex-direction: column;

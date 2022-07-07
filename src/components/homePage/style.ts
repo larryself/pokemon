@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from 'constants/colors';
 import { BREAKPOINTS } from 'constants/breakpoints';
-import { Wrapper } from '../wrapper/wrapper';
 
 export const Inner = styled.div`
   background: ${({theme}) => theme.bgContent};

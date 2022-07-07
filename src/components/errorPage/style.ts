@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   color: ${COLORS.BLACK};`
 export const WhiteText = styled.span`
-  color: #F2F2F2;`
+  color: ${COLORS.LIGHT_GREY};`
 export const Error404 = styled.div`
   width: 100%;
   height: 100%;

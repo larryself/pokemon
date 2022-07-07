@@ -1,5 +1,6 @@
 import { BREAKPOINTS } from 'constants/breakpoints';
 import styled from 'styled-components';
+import { COLORS } from '../../constants/colors';
 
 export const Container = styled.header`
   background-color: ${({theme}) => theme.bgHeader};
@@ -7,7 +8,7 @@ export const Container = styled.header`
   box-shadow: 0 4px 16px rgba(1, 28, 64, 0.2);
 `;
 
-export const Box = styled.div<{ isOpen: boolean }>`
+export const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +50,7 @@ export const Inner = styled.div<{ isOpen: boolean }>`
   @media (max-width: ${BREAKPOINTS.sm}) {
     flex-direction: column;
     border-radius: 0 0 16px 16px;
-    padding-bottom: ${props => props.isOpen && '37px'};
+    padding-bottom: 37px;
     background-color: ${({theme}) => theme.bgHeader};
     position: fixed;
     z-index: 3;
@@ -59,18 +60,12 @@ export const Inner = styled.div<{ isOpen: boolean }>`
     transition-duration: .25s;
   }
 `;
-export const MenuInner = styled.div<{ isOpen: boolean }>`
- 
+export const MenuInner = styled.div`
   @media (max-width: ${BREAKPOINTS.sm}) {
-    ${props => props.isOpen && 'margin-bottom: 22px;'};
-    visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
+    margin-bottom: 22px;
   }
 `;
-export const ThemeToggleInner = styled.div<{ isOpen: boolean }>`
-  @media (max-width: ${BREAKPOINTS.sm}) {
-
-    visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
-  }
+export const ThemeToggleInner = styled.div`
 `;
 
 export const Title = styled.h1`
@@ -116,23 +111,17 @@ export const Blur = styled.div<{ isOpen: boolean }>`
     bottom: 0;
     right: 0;
     z-index: 1;
-    background: #212121;
+    background: ${COLORS.DARK};
     opacity: 0.5;
   `};
 `;
 export const WrapLogo = styled.div<{ isOpen: boolean }>`
   display: none;
 
-  & > svg {
-    width: 100%;
-    height: 100%;
-  }
   @media (max-width: ${BREAKPOINTS.sm}) {
-    ${props => props.isOpen && `
-  width: 138px;
-  height: 51px;
-  display: block;
-  margin: 37px 0;
-  `}
+    width: 138px;
+    height: 51px;
+    margin: 37px 0;
+    display: ${props => props.isOpen && 'block'};
   }
 `;

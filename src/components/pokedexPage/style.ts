@@ -11,8 +11,12 @@ export const Inner = styled.div`
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   padding-top: 39px;
   padding-bottom: 50px;
+  @media(max-width: ${BREAKPOINTS.sm}){
+    padding-bottom: 10px;
+  }
 `;
 
 export const Title = styled.h2`
