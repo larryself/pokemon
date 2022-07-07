@@ -1,4 +1,4 @@
-export { Error, Moon, Sun, Close, Logo, BannerComplete } from './icon';
+export { Error, Moon, Sun, Close, Logo, BannerComplete, ArrowDown } from './icon';
 export { Wrapper } from './wrapper/wrapper';
 export { Header } from './header/header';
 export { Footer } from './footer/footer';
@@ -10,3 +10,11 @@ export { LegendPage } from './legendPage/legendPage';
 export { PokedexPage } from './pokedexPage/pokedexPage';
 export { Menu } from './nav/menu';
 export { ThemeToggler } from './themeToggler/themeToggler';
+export { Filter } from './filter/filter';
+export { Input } from './input/input';
+export { InputCheckbox } from './inputCheckbox/inputCheckbox';
+export { InputRange } from './inputRange/inputRange';
+export { CartBox } from './cartBox/cartBox';
+export { CartItem } from './cartItem/cartItem';
+export { ModalCard } from './modalCard/modalCard';
+export { Cart } from './cart/cart';
