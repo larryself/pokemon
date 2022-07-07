@@ -17,4 +17,3 @@ export { InputRange } from './inputRange/inputRange';
 export { CartBox } from './cartBox/cartBox';
 export { CartItem } from './cartItem/cartItem';
 export { ModalCard } from './modalCard/modalCard';
-export { Cart } from './cart/cart';
