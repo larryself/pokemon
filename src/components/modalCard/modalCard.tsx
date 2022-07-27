@@ -37,7 +37,7 @@ export const ModalCard = ({pokemon}: { pokemon: PokemonProps }) => {
   return (
     <>
       <Container onClick={closeCart}>
-        <Wrap onClick={(e) => e.stopPropagation()} isOpen={true}>
+        <Wrap onClick={(e) => e.stopPropagation()}>
           <Content>
             <Button type={'button'} onClick={closeCart}><Close/></Button>
             <ImgInner color={GRADIENT['red']}>

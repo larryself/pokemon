@@ -53,7 +53,7 @@ export const Stats = styled.div`
   font-size: 1.2rem;
   line-height: 1.166;
   text-align: center;
-  color: ${COLORS.MIDDLE_GREY};
+  color: ${COLORS.BLACK_GREY};
   margin-bottom: 11px;
   gap: 7px;
   
