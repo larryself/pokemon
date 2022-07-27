@@ -44,10 +44,11 @@ export const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: 10px;
+    height: 100%;
   }
 
   body {
-    height: 100vh;
+    height: 100%;
     font: 1.6rem 'Source Sans Pro', sans-serif;
   }
 
@@ -58,7 +59,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   main {
     flex-grow: 1;
-    overflow: hidden;
   }
   a,
   input,
