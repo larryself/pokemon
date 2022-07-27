@@ -41,7 +41,7 @@ export const Img = styled.img`
 
 export const Name = styled.p`
   font-weight: 400;
-  font-size: 7.2px;
+  font-size: 7.2rem;
   line-height: 1.166;
   letter-spacing: 4px;
   @media (max-width: ${BREAKPOINTS.lg}) {
