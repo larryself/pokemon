@@ -34,6 +34,7 @@ export const CartBox = () => {
     if (node) ref.current.observe(node);
   }, [data.limit, pokemons.length, setPage]);
 
+
   const filterByTypes = (arr: PropsPokemon[]) => {
     if (!data.filter.type.length) {
       return arr;
