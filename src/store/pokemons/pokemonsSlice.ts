@@ -69,12 +69,12 @@ export const pokemonSlice = createSlice({
       pokemonApi.endpoints.getPokemon.matchFulfilled,
       (state, {payload}) => {
         console.log(123);
-        console.log(state, payload);
-        //debugger
-        state.limit = payload.count;
-        state.pokemons = state.pokemons.concat(payload.results);
+        debugger
+        console.log('state', payload);
+
+        state.limit = payload.length;
+        state.pokemons = state.pokemons.concat(payload);
         console.log(state.pokemons);
-        state.offset = payload.next ? payload.next.split('?')[1] : payload.next;
       },
     );
   },
