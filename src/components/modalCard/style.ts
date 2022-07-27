@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from 'constants/colors';
+import { COLORS, GRADIENT, GRADIENT2 } from 'constants/colors';
 import { BREAKPOINTS } from 'constants/breakpoints';
 
 export const Container = styled.div`
@@ -18,13 +18,14 @@ export const Container = styled.div`
   @media (max-width: ${BREAKPOINTS.sm}) {
     align-items: flex-start;
   }
-
 `;
-export const Wrap = styled.div<{ isOpen: boolean }>`
+
+export const Wrap = styled.div`
   @media (max-width: ${BREAKPOINTS.sm}) {
     width: 100%;
   }
 `;
+
 export const Content = styled.div`
   display: flex;
   position: relative;
@@ -66,6 +67,7 @@ export const ImgInner = styled.div<{ color: string }>`
     padding: 85px 29px 0;
   }
 `;
+
 export const Img = styled.img`
   width: 341px;
   height: 348px;
@@ -79,8 +81,9 @@ export const Img = styled.img`
     z-index: 1;
   }
 `;
+
 export const InfoInner = styled.div`
-  background: linear-gradient(180deg, #732119 42.19%, #D93E30 100%);
+  background: ${GRADIENT2.red};
   padding: 29px 20px 25px 12px;
   border-radius: 0 16px 16px 0;
   position: relative;
@@ -126,6 +129,7 @@ export const Stat = styled.div`
   justify-content: center;
   gap: 6px;
 `;
+
 export const StatName = styled.p`
   font-family: 'Karla';
   font-style: normal;
@@ -133,6 +137,7 @@ export const StatName = styled.p`
   font-size: 1.2rem;
   line-height: 1.166;
 `;
+
 export const StatValue = styled.div`
   width: 36px;
   height: 35px;
@@ -147,6 +152,7 @@ export const StatValue = styled.div`
   font-size: 1.6rem;
   line-height: 1.187;
 `;
+
 export const Abilities = styled.div`
   display: flex;
   flex-direction: column;
@@ -157,6 +163,7 @@ export const Abilities = styled.div`
   margin-bottom: 21px;
   padding: 12px 28px 10px;
 `;
+
 export const AbilitiesTitle = styled.p`
   @media (max-width: ${BREAKPOINTS.sm}) {
     font-family: 'Karla';
@@ -166,6 +173,7 @@ export const AbilitiesTitle = styled.p`
     line-height: 36px;
   }
 `;
+
 export const Hp = styled.div`
   background: ${COLORS.GREY};
   color: ${COLORS.BLACK};
@@ -192,9 +200,11 @@ export const Column = styled.div`
     flex-direction: column;
   }
 `;
+
 export const Value = styled.p`
   font-weight: 700;
 `;
+
 export const Ring = styled.div`
   height: 41px;
   width: 41px;
@@ -207,6 +217,7 @@ export const Ring = styled.div`
     order: -1 ;
   }
 `;
+
 export const RingValue = styled.p`
   color: ${COLORS.BLACK};
   font-family: 'Karla';
@@ -223,12 +234,14 @@ export const RingValue = styled.p`
     line-height: 1.187;
   }
 `;
+
 export const TitleInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 25px;
 `;
+
 export const Inner = styled.div`
   display: flex;
   gap: 8px;
@@ -236,6 +249,7 @@ export const Inner = styled.div`
     align-items: center;
   }
 `;
+
 export const SubTitle = styled.p`
   font-family: 'SourceSansPro';
   font-style: normal;
@@ -254,6 +268,7 @@ export const SubTitle = styled.p`
     line-height: 1.25;
   }
 `;
+
 export const Line = styled.div<{ value: number, type: 'hp' | 'exp' }>`
   height: 4px;
   width: 100%;
@@ -268,7 +283,7 @@ export const Line = styled.div<{ value: number, type: 'hp' | 'exp' }>`
     left: 0;
     top: 0;
     bottom: 0;
-    background: ${props => props.type === 'hp' ? 'linear-gradient(270deg, #64D368 0.15%, #64D368 70.88%)' : 'linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);'};
+    background: ${props => props.type === 'hp' ? GRADIENT.green : GRADIENT2.yellow};
     border-radius: 8px;
     width: ${props => props.value ? `calc(100% - ${props.value}%)` : '0'}
   }
@@ -278,6 +293,7 @@ export const Line = styled.div<{ value: number, type: 'hp' | 'exp' }>`
     height: 8px;
   }
 `;
+
 export const Features = styled.div`
   position: absolute;
   left: 0;
@@ -306,6 +322,7 @@ export const Feature = styled.div<{ color: string }>`
     padding: 3px 0;
   }
 `;
+
 export const FeatureName = styled.p`
   font-weight: 400;
   font-size: 1.2rem;

@@ -9,6 +9,10 @@ export const Inner = styled.div`
   flex: 1 0 auto;
 `;
 
+export const Wrap = styled.div`
+  overflow: hidden;
+`;
+
 export const Container = styled('div')`
   display: flex;
   padding-top: 73px;

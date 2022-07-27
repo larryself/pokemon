@@ -11,10 +11,13 @@ export enum COLORS {
   WHITE_DEF = '#FFFFFF',
   BLACK = '#000000',
   DARK_GREY = '#4F4F4F',
-  MIDDLE_GREY = '#4B4B4B',
+  BLACK_GREY = '#4B4B4B',
+  MIDDLE_GREY = '#E7E7E9',
   WHITE_GREY = '#F7F7F7',
   GREY = '#FDFDFD',
   LIGHT_GREY= '#F2F2F2',
+  DARK_GREEN='#1D1E1D',
+  DARK_BLUE ='#232324',
 }
 
 export const featuresColors: { [index: string]: string } = {
@@ -49,4 +52,11 @@ export const GRADIENT: { [index: string]: string } = {
   pink: 'linear-gradient(270deg, #F89EAE 0.15%, #F4B5C1 100%)',
   gray: 'linear-gradient(270deg, #808080 0.15%, #b8b6b6 100%)',
   black: 'linear-gradient(270deg, #212121 0.15%, #555 100%)',
+};
+
+export const GRADIENT2 : { [index: string]: string } = {
+  white: 'linear-gradient(180deg, #FFFFFF 30.32%, #F5F5F5 100%)',
+  yellow: 'linear-gradient(180deg, #F5DB13 0%, #F2B807 100%)',
+  red: 'linear-gradient(180deg, #732119 42.19%, #D93E30 100%)',
+  gold: 'linear-gradient(215.78deg, #B57E10 -124.09%, #B57E10 -78.76%, #F9DF7B -35.76%, #FFF3A6 8.4%, #F9DF7B 50.24%, #B57E10 99.06%)',
 };

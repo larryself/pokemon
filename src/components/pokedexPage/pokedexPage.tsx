@@ -11,7 +11,7 @@ export const PokedexPage = () => {
         <main>
           <Wrapper>
             <Container>
-              <Title>{limit} <b>Pokemons</b> for you to choose your favorite</Title>
+              <Title>{limit || '∞'} <b>Pokemons</b> for you to choose your favorite</Title>
               <Filter/>
               <CartBox/>
             </Container>
