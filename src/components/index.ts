@@ -1,4 +1,4 @@
-export { Error, Moon, Sun, Close, Logo, BannerComplete, ArrowDown } from './icon';
+export { Error, Moon, Sun, Close, Logo, BannerComplete, ArrowDown, ArrowLeft, ArrowRight, Pokeball } from './icon';
 export { Wrapper } from './wrapper/wrapper';
 export { Header } from './header/header';
 export { Footer } from './footer/footer';
@@ -17,3 +17,5 @@ export { InputRange } from './inputRange/inputRange';
 export { CartBox } from './cartBox/cartBox';
 export { CartItem } from './cartItem/cartItem';
 export { ModalCard } from './modalCard/modalCard';
+export { Carousel } from './carousel/carousel';
+export { Card } from './card/card';
