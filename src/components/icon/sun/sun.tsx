@@ -1,6 +1,7 @@
 import { FC, SVGProps } from 'react';
+import { COLORS } from '../../../constants/colors';
 
-export const Sun: FC<SVGProps<SVGSVGElement>> = ({color='#232324'}) => (
+export const Sun: FC<SVGProps<SVGSVGElement>> = ({color= COLORS.DARK_BLUE}) => (
   <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="10.46" cy="10" r="4" fill={color}/>
     <rect x="1.46" y="9" width="4" height="2" rx="1" fill={color}/>

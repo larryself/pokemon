@@ -5,3 +5,6 @@ export { Moon } from './moon/moon';
 export { Error } from './error/error';
 export { BannerComplete } from './bannerComplete/bannerComplete';
 export { ArrowDown } from './arrowDown/arrowDown';
+export { Pokeball } from './pokeball/pokeball';
+export { ArrowLeft } from './arrow/arrowLeft';
+export { ArrowRight } from './arrow/arrowRight';
