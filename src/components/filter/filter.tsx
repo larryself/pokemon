@@ -2,7 +2,6 @@ import { Container, Inner, Burger, Blur, Line, Button } from './style';
 import { InputRange, InputCheckbox, Close, Input } from 'components';
 import React, { useState } from 'react';
 import { useAction, usePokemonSelector } from 'store';
-
 export const Filter = () => {
   const {setAttack, setExp} = useAction();
   const {filter} = usePokemonSelector();
