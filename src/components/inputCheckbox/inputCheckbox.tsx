@@ -29,7 +29,7 @@ export const InputCheckbox:FC<Props> = ({title}) => {
     return () => {
       document.removeEventListener('mousedown', handler);
     };
-  }, [isOpen]);
+  }, [handler]);
   return (
     <Container ref={ref}>
       <div onClick={(event) => event.stopPropagation()}>

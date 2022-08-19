@@ -39,7 +39,7 @@ export const InputRange: FC<Props> = ({title, onSubmit, value}) => {
     return () => {
       document.removeEventListener('mousedown', handler);
     };
-  }, [isOpen]);
+  }, [handler]);
   return (
     <Container ref={ref}>
       <Button type={'button'} onClick={() => setIsOpen(prev => !prev)}>
