@@ -1,5 +1,5 @@
-import { ErrorPage } from 'components';
+import { ErrorPage } from "components";
 
 export const Error = () => {
-  return <ErrorPage/>
-}
+	return <ErrorPage />;
+};

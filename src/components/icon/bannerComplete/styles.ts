@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const Shake = keyframes`
   0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -12,16 +12,16 @@ const Shake = keyframes`
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
-`
+`;
 export const SVG = styled.svg`
-  &:hover #small {
-    animation-name: ${Shake};
-    animation-duration: .25s;
-    animation-iteration-count: infinite;
-  };
-  // &:hover #big {
-  //   animation-name: ${Shake};
-  //   animation-duration: .25s;
-  //   animation-iteration-count: infinite;
-  // }
+	&:hover #small {
+		animation-name: ${Shake};
+		animation-duration: 0.25s;
+		animation-iteration-count: infinite;
+	}
+	// &:hover #big {
+	//   animation-name: ${Shake};
+	//   animation-duration: .25s;
+	//   animation-iteration-count: infinite;
+	// }
 `;

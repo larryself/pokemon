@@ -1,47 +1,54 @@
 import {
-  createApi,
-  fetchBaseQuery, FetchBaseQueryError,
-} from '@reduxjs/toolkit/query/react';
-import { PokemonProps } from '../../components/cartItem/cartItem';
-import axios from 'axios';
+	createApi,
+	fetchBaseQuery,
+	FetchBaseQueryError,
+} from "@reduxjs/toolkit/query/react";
+import { PokemonProps } from "../../components/cartItem/cartItem";
+import axios from "axios";
 
 interface ListResponse {
-  count: number;
-  next: string | null;
-  prev: string | null;
-  results: PokemonProps[];
+	count: number;
+	next: string | null;
+	prev: string | null;
+	results: PokemonProps[];
 }
 
-export const fetchAll = async (arr: { name: string, url: string }[]) => {
-  const dataPokemons = await axios.all(arr.map((item: { url: string }) => axios.get(item.url))).then((res) => res.map((item) => item.data));
-  const dataSpecies = await axios.all(dataPokemons.map((item) => axios.get(item.species.url))).then((res) => res.map((item) => item.data));
-  const species: { color: string, generation: string }[] = dataSpecies.map((item: { color: { name: string }, generation: { name: string } }) => {
-    return {color: item.color.name, generation: item.generation.name};
-  });
-  const mergedData = dataPokemons.map((item, index) => {
-    return {...item, ...species[index]};
-  });
-  return mergedData;
+export const fetchAll = async (arr: { name: string; url: string }[]) => {
+	const dataPokemons = await axios
+		.all(arr.map((item: { url: string }) => axios.get(item.url)))
+		.then((res) => res.map((item) => item.data));
+	const dataSpecies = await axios
+		.all(dataPokemons.map((item) => axios.get(item.species.url)))
+		.then((res) => res.map((item) => item.data));
+	const species: { color: string; generation: string }[] = dataSpecies.map(
+		(item: { color: { name: string }; generation: { name: string } }) => {
+			return { color: item.color.name, generation: item.generation.name };
+		}
+	);
+	const mergedData = dataPokemons.map((item, index) => {
+		return { ...item, ...species[index] };
+	});
+	return mergedData;
 };
 
 export const pokemonApi = createApi({
-  reducerPath: 'pokemonApi',
-  baseQuery: fetchBaseQuery({baseUrl: 'https://pokeapi.co/api/v2/'}),
-  endpoints: (builder) => ({
-    getPokemon: builder.query<PokemonProps[], void>({
-      async queryFn(_arg, _queryApi, _extraOptions, fetchWithBQ) {
-        const result = await fetchWithBQ('pokemon');
-        const data = result.data as ListResponse;
-        const limit = data.count;
-        const results = await fetchWithBQ(`pokemon/?limit=${limit}`);
-        const allLinks = results.data as ListResponse;
-        const allPokemons = await fetchAll(allLinks.results);
-        return allPokemons
-          ? {data: allPokemons as any}
-          : {error: result.error as FetchBaseQueryError};
-      },
-    }),
-  }),
+	reducerPath: "pokemonApi",
+	baseQuery: fetchBaseQuery({ baseUrl: "https://pokeapi.co/api/v2/" }),
+	endpoints: (builder) => ({
+		getPokemon: builder.query<PokemonProps[], void>({
+			async queryFn(_arg, _queryApi, _extraOptions, fetchWithBQ) {
+				const result = await fetchWithBQ("pokemon");
+				const data = result.data as ListResponse;
+				const limit = data.count;
+				const results = await fetchWithBQ(`pokemon/?limit=${limit}`);
+				const allLinks = results.data as ListResponse;
+				const allPokemons = await fetchAll(allLinks.results);
+				return allPokemons
+					? { data: allPokemons as any }
+					: { error: result.error as FetchBaseQueryError };
+			},
+		}),
+	}),
 });
 
-export const {useGetPokemonQuery} = pokemonApi;
+export const { useGetPokemonQuery } = pokemonApi;
