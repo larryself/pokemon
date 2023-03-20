@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from 'constants/colors';
 import { BREAKPOINTS } from 'constants/breakpoints';
-import { Wrapper } from '../wrapper/wrapper';
 
 export const Inner = styled.div`
   background: ${({theme}) => theme.bgContent};
@@ -9,6 +7,10 @@ export const Inner = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
+`;
+
+export const Wrap = styled.div`
+  overflow: hidden;
 `;
 
 export const Container = styled('div')`

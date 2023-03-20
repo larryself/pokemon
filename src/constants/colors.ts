@@ -8,8 +8,55 @@ export enum COLORS {
   WHITE = '#F6F7F9',
   DARK = '#212121',
   BUTTON = '#F2CB07',
-  WHITE_DEF='#FFFFFF',
-  BLACK='#000000',
-  DARK_GREY='#4F4F4F',
-  GREY = '#FDFDFD'
+  WHITE_DEF = '#FFFFFF',
+  BLACK = '#000000',
+  DARK_GREY = '#4F4F4F',
+  BLACK_GREY = '#4B4B4B',
+  MIDDLE_GREY = '#E7E7E9',
+  WHITE_GREY = '#F7F7F7',
+  GREY = '#FDFDFD',
+  LIGHT_GREY= '#F2F2F2',
+  DARK_GREEN='#1D1E1D',
+  DARK_BLUE ='#232324',
 }
+
+export const featuresColors: { [index: string]: string } = {
+  normal: '#76AADB',
+  flying: '#76AADB',
+  fire: '#F76545',
+  fighting: '#F76545',
+  dragon: '#F76545',
+  grass: '#70A83B',
+  bug: '#70A83B',
+  ice: '#A2CFF0',
+  water: '#A2CFF0',
+  poison: '#A974BC',
+  psychic: '#A974BC',
+  fairy: '#A974BC',
+  ghost: '#A974BC',
+  steel: '#A1A1A1',
+  dark: '#A1A1A1',
+  rock: '#A1A1A1',
+  ground: '#9B897B',
+  electric: '#F7C545',
+};
+
+export const GRADIENT: { [index: string]: string } = {
+  green: 'linear-gradient(270deg, #64D368 0.15%, #64D368 70.88%)',
+  red: 'linear-gradient(270deg, #B33327 0.15%, #D93E30 100%)',
+  blue: 'linear-gradient(270deg, #5BC7FA 0.15%, #35BAFF 100%)',
+  white: 'linear-gradient(270deg, #d0d0d0 0.15%, #fff 100%)',
+  brown: 'linear-gradient(270deg, #a52a2a 0.15%, #a71a1a 100%)',
+  yellow: 'linear-gradient(270deg, #F2CB07 0.15%, #F2B807 100%)',
+  purple: 'linear-gradient(270deg, #7e137e 0.15%, #800080 100%)',
+  pink: 'linear-gradient(270deg, #F89EAE 0.15%, #F4B5C1 100%)',
+  gray: 'linear-gradient(270deg, #808080 0.15%, #b8b6b6 100%)',
+  black: 'linear-gradient(270deg, #212121 0.15%, #555 100%)',
+};
+
+export const GRADIENT2 : { [index: string]: string } = {
+  white: 'linear-gradient(180deg, #FFFFFF 30.32%, #F5F5F5 100%)',
+  yellow: 'linear-gradient(180deg, #F5DB13 0%, #F2B807 100%)',
+  red: 'linear-gradient(180deg, #732119 42.19%, #D93E30 100%)',
+  gold: 'linear-gradient(215.78deg, #B57E10 -124.09%, #B57E10 -78.76%, #F9DF7B -35.76%, #FFF3A6 8.4%, #F9DF7B 50.24%, #B57E10 99.06%)',
+};

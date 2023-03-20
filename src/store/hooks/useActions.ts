@@ -1,12 +1,13 @@
 import { bindActionCreators } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import { themeActions } from 'store/themeReducer';
+import { themeActions, pokemonActions } from 'store';
 
 const allActions = {
-  ...themeActions
-}
+  ...themeActions,
+  ...pokemonActions,
+};
 
 export const useAction = () => {
   const dispatch = useDispatch();
-  return bindActionCreators(allActions, dispatch)
-}
+  return bindActionCreators(allActions, dispatch);
+};
